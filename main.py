@@ -64,15 +64,16 @@ def main():
                 print(f"Error: No task found with ID {task_id}.")
 
         elif choice == "4":
-            try:
-                task_id = int(input("Enter task ID to delete: "))
-            except ValueError:
-                print("Error: Please enter a valid task ID (a number).")
-                continue
-            if manager.delete_task(task_id):
-                print(f"Task {task_id} deleted.")
-            else:
-                print(f"Error: No task found with ID {task_id}.")
+                    try:
+                        task_id = int(input("Enter task ID to delete: "))
+                    except ValueError:
+                        print("Error: Please enter a valid task ID (a number).")
+                        continue
+                    if manager.delete_task(task_id):
+                        print(f"Task {task_id} deleted.")
+                    else:
+                        print(f"Error: No task found with ID {task_id}.")
+        
 
         elif choice == "5":
             print("Goodbye!")
