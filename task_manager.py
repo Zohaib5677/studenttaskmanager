@@ -22,8 +22,10 @@ class TaskManager:
         return False
 
     def delete_task(self, task_id):
-        for task in self.tasks:
-            if task["id"] == task_id:
-                self.tasks.remove(task)
-                return True
-        return False
+           """Delete a task by id. Return True if found, else False."""
+           for task in self.tasks:
+               if task["id"] == task_id:
+                   self.tasks.remove(task)
+                   return True
+           return False
+   
