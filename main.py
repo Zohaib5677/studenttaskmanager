@@ -53,15 +53,16 @@ def main():
             display_tasks(manager)
 
         elif choice == "3":
-            try:
-                task_id = int(input("Enter task ID to complete: "))
-            except ValueError:
-                print("Error: Please enter a valid task ID (a number).")
-                continue
-            if manager.complete_task(task_id):
-                print(f"Task {task_id} marked as completed.")
-            else:
-                print(f"Error: No task found with ID {task_id}.")
+                    try:
+                        task_id = int(input("Enter task ID to complete: "))
+                    except ValueError:
+                        print("Error: Please enter a valid task ID (a number).")
+                        continue
+                    if manager.complete_task(task_id):
+                        print(f"Task {task_id} marked as completed.")
+                    else:
+                        print(f"Error: No task found with ID {task_id}.")
+        
 
         elif choice == "4":
             try:
