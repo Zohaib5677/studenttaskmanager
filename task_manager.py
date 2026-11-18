@@ -4,6 +4,7 @@ class TaskManager:
         self.next_id = 1
 
     def add_task(self, title):
+        
         if not title or not title.strip():
             return None
         task = {"id": self.next_id, "title": title.strip(), "completed": False}
